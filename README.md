@@ -6,7 +6,7 @@ Shannon O'Neil
 Anesti Vega  
 Caroline Bless  
 Kaya Shipkowski  
-Wyllana Sinkler 
+Wyllana Sinkler  
 Lily Manrodt  
 Matthew Began  
 Nicholas Tolentino  

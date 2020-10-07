@@ -2,15 +2,15 @@
 2020 - ____
 
 ### Contributors
-Shannon O'Neil
-Anesti Vega
-Caroline Bless
-Kaya Shipkowski
-Lana __________
-Lily Manrodt
-Matthew Began
-Nicholas Tolentino
-Tim Patschorke
+Shannon O'Neil  
+Anesti Vega  
+Caroline Bless  
+Kaya Shipkowski  
+Lana __________  
+Lily Manrodt  
+Matthew Began  
+Nicholas Tolentino  
+Tim Patschorke  
 
 ### Project Owner
 Stephen Wood

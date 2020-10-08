@@ -1,7 +1,12 @@
 import socket
+import configparser as CP
 
-HOST = '169.254.175.217'
-PORT = 10000
+configParser = CP.RawConfigParser()
+configFilePath = 'config.conf'
+configParser.read(configFilePath)
+
+HOST = configParser.get('Host.IP.Info', 'ADDRESS')
+PORT = int(configParser.get('Host.IP.Info', 'PORT'))
 
 endData = False
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:

@@ -26,5 +26,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                     print('Error: %r' %e)
                     run_main_loop = false
                 endData = True
-            print(data)
+            print(data.decode())
             

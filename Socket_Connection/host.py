@@ -1,26 +1,25 @@
 import socket
-import sys
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address= ('localhost', 10000)
-print >> sys.stderr, 'starting up on %s port %s' % server_address
-sock.bind(server_address)
-sock.listen(1)
+HOST = '169.254.175.217'
+PORT = 10000
 
-with True:
-    print >> sys.stderr, 'waiting for a connection'
-    connection, client_address = sock.accept()
-    try:
-        print >> sys.stderr, 'connection from', client_address
-        
-        while True:
-            data = connection.recv(16)
-            print >> sys.stderr, 'revcieved "%s"' %data
-            if data:
-                print >> sys.stderr, 'sending data back to the client'
-                connection.sendall(data)
-            else:
-                print >> sys.stderr, 'no more data from', client_address
-                break
-    finally:
-        connection.close()
+endData = False
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((HOST, PORT))
+    s.listen()
+    conn, addr = s.accept()
+    with conn: 
+        print('Connected by', addr)
+        while not endData:
+            try:
+                data = conn.recv(1024)     
+                if not data:
+                    break
+                conn.sendall(data)
+            except socket.error:
+                if socket.errno != errno.EWOULDBLOCK:
+                    print('Error: %r' %e)
+                    run_main_loop = false
+                endData = True
+            print(data)
+            
